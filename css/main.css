@@ -13,3 +13,48 @@ h1 {
   font-family: 'Meriweather';
   color: #172737;
   }
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.3fr 3fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Header Header Header Header"
+    "Menu-Bar Menu-Bar Menu-Bar Loginout"
+    "MainBody MainBody MainBody MainBody"
+    "Footer Footer Footer Footer";
+}
+
+.Header { grid-area: Header; }
+
+.Footer { grid-area: Footer; }
+
+.MainBody { grid-area: MainBody; }
+
+.Menu-Bar { grid-area: Menu-Bar; }
+
+.Loginout { grid-area: Loginout; }
+
+
+/* For presentation only, no need to copy the code below */
+.grid-container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.grid-container *:after {
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.grid-container *:after {
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
